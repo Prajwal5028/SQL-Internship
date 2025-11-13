@@ -58,10 +58,4 @@ This task involves designing a database schema for a Library Management System i
 1. Open MySQL Workbench / phpMyAdmin / CLI.
 2. Run the `schema.sql` script to create `LibraryDB` and tables.
 
-### GitHub Submission Steps
-1. Create a new repository (e.g., `SQL-Internship-Task-1`).
-2. Upload `schema.sql`, `ER-diagram.png`, and this `README.md`.
-3. Commit and copy the repo URL.
-4. Paste the repo URL into the submission Google Form.
-
 ---
