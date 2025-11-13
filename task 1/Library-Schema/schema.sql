@@ -1,0 +1,36 @@
+-- Library Management System Schema
+CREATE DATABASE IF NOT EXISTS LibraryDB;
+USE LibraryDB;
+
+-- Author Table
+CREATE TABLE IF NOT EXISTS Author (
+    AuthorID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL
+) ENGINE=InnoDB;
+
+-- Book Table
+CREATE TABLE IF NOT EXISTS Book (
+    BookID INT AUTO_INCREMENT PRIMARY KEY,
+    Title VARCHAR(150) NOT NULL,
+    Genre VARCHAR(50),
+    AuthorID INT,
+    FOREIGN KEY (AuthorID) REFERENCES Author(AuthorID)
+) ENGINE=InnoDB;
+
+-- Member Table
+CREATE TABLE IF NOT EXISTS Member (
+    MemberID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Email VARCHAR(150) UNIQUE NOT NULL
+) ENGINE=InnoDB;
+
+-- Loan Table
+CREATE TABLE IF NOT EXISTS Loan (
+    LoanID INT AUTO_INCREMENT PRIMARY KEY,
+    BookID INT,
+    MemberID INT,
+    IssueDate DATE NOT NULL,
+    ReturnDate DATE,
+    FOREIGN KEY (BookID) REFERENCES Book(BookID),
+    FOREIGN KEY (MemberID) REFERENCES Member(MemberID)
+) ENGINE=InnoDB;
