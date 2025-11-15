@@ -167,10 +167,4 @@ For backup, testing, or intermediate processing without affecting real data.
 
 # 📌 End of Task 2
 
-You may now submit your folder or continue to Task 3.  
-Place this file in:
-
-```
-sql-internship/task2/README.md
-```
 
